@@ -20,6 +20,11 @@ public class ApplicationController {
 	private MascotaService mascotaService;
 
 
+	@GetMapping("/")
+	public String homePage() {
+		return "home";
+	}
+	
 	@GetMapping("/mascotas")
 	public ResponseEntity<MascotasResponse> getAllMascotas() {
 		return ResponseEntity.ok(mascotaService.getAllMascotas());
