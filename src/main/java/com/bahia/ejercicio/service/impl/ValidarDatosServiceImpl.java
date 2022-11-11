@@ -5,6 +5,7 @@ import org.springframework.stereotype.Service;
 import com.bahia.ejercicio.common.ConstantsError;
 import com.bahia.ejercicio.common.Utils;
 import com.bahia.ejercicio.dto.MascotaRequest;
+import com.bahia.ejercicio.enums.estado.EstadoMascotas;
 import com.bahia.ejercicio.exception.ValidationException;
 import com.bahia.ejercicio.service.IValidarDatosService;
 
@@ -26,5 +27,7 @@ public class ValidarDatosServiceImpl implements IValidarDatosService {
 			throw new ValidationException(ConstantsError.COD_RESP_ERROR_VALIDACION,
 					"El estado de busqueda es obligatorio. ");
 		}
+		
 	}
+
 }
