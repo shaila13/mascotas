@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="ISO-8859-1">
+<title>Mascotas en casa</title>
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+</head>
+<body>
+
+	<h2>Datos de la mascota</h2>
+	<h3 th:text="'Codigo: '+ ${mascota.mascota.animal.idAnimal}"></h3>
+	<h3 th:text="'Nombre: '+ ${mascota.mascota.animal.nombre}"></h3>
+	<h3 th:text="'Especie: '+ ${mascota.mascota.animal.especie}"></h3>
+	<h3 th:text="'Estado:
+	 '+ ${mascota.mascota.animal.estado}"></h3>
+	<h3 th:text="'Fecha Nacimiento: '+ ${mascota.mascota.animal.fechaNacimiento}"></h3>
+	<h3 th:text="'Numero Visitas: '+ ${mascota.mascota.animal.numVisitas}"></h3>
+	<h3 th:text="'Propietario: '+ ${mascota.mascota.animal.propietario.apellidos} + ', ' + ${mascota.mascota.animal.propietario.nombre}"></h3>
+	
+	<td>
+	    	<a th:href="@{/mascotas}" class="btn btn-primary mb-3">Volver</a>
+	</td>
+	
+</body>
+</html>
